@@ -1,0 +1,13 @@
+{
+  "config_sha256": "d761f477260178b7d46187f6fe8499c78114729ff5ff3575df5a19f6f1a46716",
+  "model_sha256": "22888b2c568a1dfcb06443db27dd740379363d681a8680c18a07aea70796bbc6",
+  "bytes": 15137411,
+  "training_seconds": 54.135605916031636,
+  "training_split": "train",
+  "threads": 4,
+  "validation_references_read": false,
+  "test_references_read": false,
+  "reproduced_model_sha256": "42ef94d1d95c146336950b3ee19fd2b268b962cb5440d58c925ead0f21154c87",
+  "reproduced_bytes": 15136178,
+  "reproduction_comparison": "461 arrays and all metadata exactly equal; serialized pickle identity can differ."
+}

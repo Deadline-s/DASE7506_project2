@@ -1,0 +1,129 @@
+{
+  "model_sha256": "22888b2c568a1dfcb06443db27dd740379363d681a8680c18a07aea70796bbc6",
+  "protocol": "Validation only; remove one frozen branch and renormalize remaining fixed weights without fitting or reoptimizing. No test data.",
+  "full": {
+    "correct": 756,
+    "n": 798,
+    "accuracy": 94.73684210526315,
+    "hard_correct": 313,
+    "hard_n": 355,
+    "hard_accuracy": 88.16901408450704,
+    "subgroups": [
+      {
+        "correct_candidates": 1,
+        "n": 117,
+        "correct": 83
+      },
+      {
+        "correct_candidates": 2,
+        "n": 123,
+        "correct": 117
+      },
+      {
+        "correct_candidates": 3,
+        "n": 179,
+        "correct": 177
+      },
+      {
+        "correct_candidates": 4,
+        "n": 379,
+        "correct": 379
+      }
+    ]
+  },
+  "ablations": [
+    {
+      "removed": "plain",
+      "correct": 753,
+      "n": 798,
+      "accuracy": 94.3609022556391,
+      "hard_correct": 310,
+      "hard_n": 355,
+      "hard_accuracy": 87.32394366197182,
+      "subgroups": [
+        {
+          "correct_candidates": 1,
+          "n": 117,
+          "correct": 83
+        },
+        {
+          "correct_candidates": 2,
+          "n": 123,
+          "correct": 116
+        },
+        {
+          "correct_candidates": 3,
+          "n": 179,
+          "correct": 175
+        },
+        {
+          "correct_candidates": 4,
+          "n": 379,
+          "correct": 379
+        }
+      ]
+    },
+    {
+      "removed": "balanced",
+      "correct": 745,
+      "n": 798,
+      "accuracy": 93.35839598997494,
+      "hard_correct": 302,
+      "hard_n": 355,
+      "hard_accuracy": 85.07042253521126,
+      "subgroups": [
+        {
+          "correct_candidates": 1,
+          "n": 117,
+          "correct": 70
+        },
+        {
+          "correct_candidates": 2,
+          "n": 123,
+          "correct": 117
+        },
+        {
+          "correct_candidates": 3,
+          "n": 179,
+          "correct": 179
+        },
+        {
+          "correct_candidates": 4,
+          "n": 379,
+          "correct": 379
+        }
+      ]
+    },
+    {
+      "removed": "existing",
+      "correct": 750,
+      "n": 798,
+      "accuracy": 93.98496240601504,
+      "hard_correct": 307,
+      "hard_n": 355,
+      "hard_accuracy": 86.47887323943661,
+      "subgroups": [
+        {
+          "correct_candidates": 1,
+          "n": 117,
+          "correct": 84
+        },
+        {
+          "correct_candidates": 2,
+          "n": 123,
+          "correct": 112
+        },
+        {
+          "correct_candidates": 3,
+          "n": 179,
+          "correct": 175
+        },
+        {
+          "correct_candidates": 4,
+          "n": 379,
+          "correct": 379
+        }
+      ]
+    }
+  ]
+}

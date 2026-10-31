@@ -1,0 +1,11 @@
+{
+  "model_sha256": "22888b2c568a1dfcb06443db27dd740379363d681a8680c18a07aea70796bbc6",
+  "validation_groups": 798,
+  "finite_scores": true,
+  "batch_independence": true,
+  "candidate_permutation": true,
+  "question_permutation": true,
+  "unseen_ids": true,
+  "empty_input": true,
+  "reproduced_arrays": 461
+}

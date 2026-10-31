@@ -1,0 +1,18 @@
+{
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "python": "3.12.9 (v3.12.9:fdb81425a9a, Feb  4 2025, 12:21:36) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "threads": 4,
+  "fresh_prediction_plus_scoring_seconds": {
+    "validation": 3.039261083933525,
+    "test": 1.9850645000115037
+  },
+  "assets": {
+    "model.pkl": {
+      "bytes": 15137411,
+      "sha256": "22888b2c568a1dfcb06443db27dd740379363d681a8680c18a07aea70796bbc6"
+    }
+  },
+  "reference_machine_verified": false
+}
