@@ -1,0 +1,338 @@
+{
+  "version": 12,
+  "components": [
+    {
+      "kind": "attention",
+      "weight": 0.2,
+      "recipe": {
+        "config": {
+          "name": "plain",
+          "mode": "compact",
+          "width": 96,
+          "layers": 1,
+          "dropout": 0.2,
+          "lr": 0.0003,
+          "augment": false
+        },
+        "epoch": 8,
+        "fold_seed": 941,
+        "seeds": [
+          8341,
+          8342,
+          8343,
+          8344,
+          8345
+        ]
+      }
+    },
+    {
+      "kind": "attention",
+      "weight": 0.6000000000000001,
+      "recipe": {
+        "config": {
+          "name": "balanced",
+          "mode": "compact",
+          "width": 96,
+          "layers": 1,
+          "dropout": 0.2,
+          "lr": 0.0003,
+          "augment": true
+        },
+        "epoch": 8,
+        "fold_seed": 941,
+        "seeds": [
+          8341,
+          8342,
+          8343,
+          8344,
+          8345
+        ]
+      }
+    },
+    {
+      "kind": "existing",
+      "weight": 0.2,
+      "recipe": {
+        "version": 9,
+        "weight": 0.3,
+        "temperature": 0.3717555228011868,
+        "baseline": {
+          "version": 8,
+          "penalty": 0.5,
+          "reward": 2,
+          "components": [
+            {
+              "kind": "verified",
+              "weight": 0.64,
+              "temperature": 2.6297582003756372,
+              "probability": false,
+              "name": "rank",
+              "configuration": {
+                "config": {
+                  "name": "rank",
+                  "objective": "rank",
+                  "skip": true
+                },
+                "epoch": 40,
+                "seeds": [
+                  7506,
+                  7507,
+                  7508
+                ]
+              }
+            },
+            {
+              "kind": "legacy",
+              "weight": 0.16,
+              "temperature": 1.0107270546741436,
+              "probability": false,
+              "name": "legacy",
+              "configuration": {
+                "version": 3,
+                "components": [
+                  {
+                    "aggregation": "mean",
+                    "answer_pooling": 1.0,
+                    "weight": 0.75,
+                    "models": [
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "rank",
+                          "seed": 7506,
+                          "epoch": 71
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "rank",
+                          "seed": 7507,
+                          "epoch": 84
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "rank",
+                          "seed": 7508,
+                          "epoch": 19
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "rank",
+                          "seed": 7509,
+                          "epoch": 32
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "rank",
+                          "seed": 7510,
+                          "epoch": 8
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "rank",
+                          "seed": 7511,
+                          "epoch": 34
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "mass",
+                          "seed": 7506,
+                          "epoch": 7
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "mass",
+                          "seed": 7507,
+                          "epoch": 42
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "mass",
+                          "seed": 7508,
+                          "epoch": 7
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "mass",
+                          "seed": 7509,
+                          "epoch": 9
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "mass",
+                          "seed": 7510,
+                          "epoch": 6
+                        }
+                      },
+                      {
+                        "mode": "rich",
+                        "config": {
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "mass",
+                          "seed": 7511,
+                          "epoch": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "aggregation": "normalized",
+                    "answer_pooling": 1.0,
+                    "weight": 0.25,
+                    "models": [
+                      {
+                        "mode": "answer_loss",
+                        "config": {
+                          "seed": 7506,
+                          "epoch": 39,
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "answer_ce"
+                        }
+                      },
+                      {
+                        "mode": "answer_loss",
+                        "config": {
+                          "seed": 7507,
+                          "epoch": 14,
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "answer_ce"
+                        }
+                      },
+                      {
+                        "mode": "answer_loss",
+                        "config": {
+                          "seed": 7508,
+                          "epoch": 6,
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "answer_ce"
+                        }
+                      },
+                      {
+                        "mode": "answer_loss",
+                        "config": {
+                          "seed": 7509,
+                          "epoch": 44,
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "answer_ce"
+                        }
+                      },
+                      {
+                        "mode": "answer_loss",
+                        "config": {
+                          "seed": 7510,
+                          "epoch": 6,
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "answer_ce"
+                        }
+                      },
+                      {
+                        "mode": "answer_loss",
+                        "config": {
+                          "seed": 7511,
+                          "epoch": 11,
+                          "width": 64,
+                          "dropout": 0.3,
+                          "decay": 0.01,
+                          "loss": "answer_ce"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "verified",
+              "weight": 0.2,
+              "temperature": 0.215985408219961,
+              "probability": true,
+              "name": "margin",
+              "configuration": {
+                "config": {
+                  "name": "margin",
+                  "objective": "margin",
+                  "skip": true,
+                  "readout": "answer_probability"
+                },
+                "epoch": 10,
+                "seeds": [
+                  7506,
+                  7507,
+                  7508
+                ]
+              }
+            }
+          ]
+        },
+        "text": {
+          "mode": "word",
+          "C": 0.001
+        }
+      }
+    }
+  ]
+}
